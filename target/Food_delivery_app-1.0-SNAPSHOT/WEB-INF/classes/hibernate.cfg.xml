@@ -1,0 +1,38 @@
+
+<hibernate-configuration>
+
+  <session-factory>
+
+    <!-- Database connection settings -->
+    <property name="connection.url">jdbc:postgresql://localhost:5432/Food_delivery</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+    <property name="connection.username">ivan</property>
+    <property name="connection.password">123</property>
+
+    <property name="current_session_context_class">thread</property>
+
+    <!-- JDBC connection pool (use the built-in) -->
+    <property name="connection.pool_size">1</property>
+
+    <!-- SQL dialect -->
+    <property name="dialect">org.hibernate.dialect.PostgreSQL95Dialect</property>
+
+    <!-- Disable the second-level cache  -->
+    <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+
+    <!-- Echo all executed SQL to stdout -->
+    <property name="show_sql">true</property>
+
+    <!-- Drop and re-create the database schema on startup -->
+    <property name="hbm2ddl.auto">update</property>
+
+    <!-- Names the annotated entity class -->
+    <!--        <mapping class="Models.Customer"/>-->
+    <!--        <mapping class="Models.Delivery"/>-->
+    <!--        <mapping class="Models.Courier"/>-->
+    <!--        <mapping class="Models.DeliveryStatus"/>-->
+    <!--        <mapping class="Models.Restaurant"/>-->
+
+  </session-factory>
+
+</hibernate-configuration>
